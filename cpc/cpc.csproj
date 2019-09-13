@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>cpc</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <PackageId>cpc</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" Version="2.*" />
+    <PackageReference Include="ServiceStack" Version="5.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\cpc.ServiceInterface\cpc.ServiceInterface.csproj" />
+    <ProjectReference Include="..\cpc.ServiceModel\cpc.ServiceModel.csproj" />
+  </ItemGroup>
+
+</Project>
