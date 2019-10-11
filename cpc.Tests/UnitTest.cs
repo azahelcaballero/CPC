@@ -13,7 +13,7 @@ namespace cpc.Tests
         public UnitTest()
         {
             appHost = new BasicAppHost().Init();
-            appHost.Container.AddTransient<MyServices>();
+            appHost.Container.AddTransient<PrintingLogService>();
         }
 
         [OneTimeTearDown]
@@ -22,7 +22,7 @@ namespace cpc.Tests
         [Test]
         public void Can_call_MyServices()
         {
-            var service = appHost.Container.Resolve<MyServices>();
+            var service = appHost.Container.Resolve<PrintingLogService>();
 
             var response = (HelloResponse)service.Any(new Hello { Name = "World" });
 
